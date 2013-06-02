@@ -1,6 +1,9 @@
 *{
+	text-decoration: none;
+	border: none;
 	transition: all .5s;
 	-webkit-transition: all .5s; /* Safari */
+
 }
 
 body{
@@ -17,10 +20,25 @@ body{
 .social-top a:hover{
 	opacity: .5;
 }
+.choices{
+	display: inline-block;
+	clear: both;
+}
+.choice{
+	display: block;
+	width:100%;
+}
+.trainer{
+	float: right;
+}
+.member{
+	float: left;
+}
 .header{
 	text-align: center;
 	background-color: #e45629;
 	background-image: url('../images/gymnut-background.jpg');
+	background-position: center top;
 	color: #fff;
 	padding: 3em 0;
 }
@@ -65,33 +83,38 @@ h3{
 	font-weight: 100;
 }
 .input{
+	display: block-inline;
 	height: 44px;
 	border: 3px solid #67984f;
 	border-radius: 3px;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0 0 0 20px;
-	width: 200px;
+	width: 250px;
 	font-family: 'Lato', sans-serif;
 	font-size: 1em;
 	font-weight: 100;
 	line-height: 44px;
+	-webkit-appearance: none;
+
 
 }
 .button{
+	-webkit-appearance: none;
+	display: block-inline;
 	line-height: 44px;
 	font-family: 'Lato', sans-serif;
 	font-size: 1em;
 	font-weight: 400;
 	color: #fff;
 	position: relative;
-	left: -6px;
+	top: 20px;
 	height: 50px;
 	border: 3px solid #67984f !important;
 	border-radius: 3px;
 	background-color:#67984f;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
-	width: 70px;
+	width: 200px;
 
 }
 .button:hover{
@@ -122,6 +145,11 @@ h2{
 	margin: 1em auto;
 
 }
+.choice{
+	display: block;
+	width:196px;
+	padding:0 20px;
+}
 .footer{
 	background-color: #fff;
 	width: 500px;
@@ -141,21 +169,49 @@ h2{
 	font-size: 1.5em;
 }
 .input{
+
+	height: 44px;
+	border: 3px solid #67984f;
+	border-radius: 3px;
+	margin: 0;
+	padding: 0 0 0 20px;
 	width: 300px;
+	font-family: 'Lato', sans-serif;
+	font-size: 1em;
+	font-weight: 100;
+	line-height: 44px;
+
 }
 .button{
+
+	line-height: 44px;
+	font-family: 'Lato', sans-serif;
+	font-size: 1em;
+	font-weight: 400;
+	color: #fff;
+	position: relative;
+	top: 0;
+	left: -6px;
+	height: 50px;
+	border: 3px solid #67984f !important;
+	border-radius: 3px;
+	background-color:#67984f;
+	margin: 0;
+	padding: 0;
 	width: 100px;
-}
+
 }
 
-@media (min-width: 1200px){
+}
+
+@media (min-width: 1280px){
 
 h2{
 	font-size: 5em;
 	width: 1200px;
 	text-align: center;
 	display: block;
-	margin: 1em auto;
+	margin: 1em auto .5em;
 
 }
 h3{
@@ -163,14 +219,17 @@ h3{
 	width: 900px;
 	text-align: center;
 	margin: 0 auto 1em;
-
 }
+
 .header{
 	text-align: center;
 	background-color: #e45629;
 	background-image: url('../images/gymnut-background.jpg');
 	color: #fff;
 	padding: 3em 0 700px;
+}
+.input{
+	width: 450px;
 }
 .footer{
 	position: relative;
@@ -179,14 +238,14 @@ h3{
 	display: block;
 	background-image: url('../images/gymnut-shape.png');
 	width: 1280px;
-	height: 1585px;
+	height: 1385px;
 	margin: 0 auto;
-	padding:0;
+	padding:0 0 115px 0 ;
 
 }
 .footer-bg{
 	display: block;
-	height: 886px;
+	height: 900px;
 }
 #gymnut-shape{
 	display: none;
@@ -199,12 +258,7 @@ h3{
 	padding: 0 50px;
 	display: inline-block;
 }
-.input{
-	width: 400px;
-}
-.button{
-	width: 100px;
-}
+
 .tracking{
 	position: relative;
 	top: 480px;
@@ -231,7 +285,8 @@ h3{
 }
 .social{
 	position: relative;
-	top: 450px;
+	top: 550px;
+	left: 400px;
 }
 }
 
