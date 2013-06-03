@@ -28,6 +28,10 @@ body{
 	display: block;
 	width:100%;
 }
+
+.choice img:hover{
+	opacity: .5 !important;
+}
 .trainer{
 	float: right;
 }
