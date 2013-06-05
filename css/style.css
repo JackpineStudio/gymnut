@@ -27,6 +27,10 @@ body{
 	display: block;
 	width:100%;
 }
+.choice label{
+	width: 100%;
+	clear: left;
+}
 
 .choice img:hover{
 	
@@ -209,20 +213,23 @@ h2{
 }
 
 @media (min-width: 1280px){
-
+.logo{
+	margin: 0;
+	padding: 0;
+}
 h2{
 	font-size: 5em;
 	width: 1200px;
 	text-align: center;
 	display: block;
-	margin: 1em auto .5em;
+	margin: 44px auto 0;
 
 }
 h3{
 	font-size: 2em;
 	width: 900px;
 	text-align: center;
-	margin: 0 auto 1em;
+	margin: 0 auto 66px;
 }
 .social-top{
 	position: relative;
