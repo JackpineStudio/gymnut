@@ -265,7 +265,8 @@ function mce_success_cb(resp){
 		d2.src = "images/gymnut-trainer-green.png";
 		r2.checked="true"
 		d2s = true;
-		
+		d1s = false;
+		d2.style.opacity ="1";
 	};
 	var d1click = function(){
 		d2.src="images/gymnut-trainer.png";
@@ -273,28 +274,30 @@ function mce_success_cb(resp){
 		document.getElementById("G1").style.color="#63964e";
 		d1.src ="images/gymnut-member-green.png";
 		r1.checked="true";
+		d1.style.opacity ="1";
 		d1s = true;
+		d2s = false;
 	};
 	d1.onclick= d1click;
 	d1click();
 	d2.onmouseover = function(){
-		d1.src ="images/gymnut-member.png";
-		document.getElementById("G1").style.color="white";
 		document.getElementById("G2").style.color="#63934e";
 		d2.src = "images/gymnut-trainer-green.png";
-		r2.checked="true";
-		d1s= false;
-		d2s = false;
+		if(!d2s)
+		d2.style.opacity="0.7";
+		
+		
 	};	
 	d1.onmouseover= function(){
-		d2.src="images/gymnut-trainer.png";
-		document.getElementById("G2").style.color="white";
 		document.getElementById("G1").style.color="#63964e";
 		d1.src ="images/gymnut-member-green.png";
-		r1.checked="false";
-		d1s= false;
-		d2s = false;
+		if(!d1s)
+		d1.style.opacity ="0.7";
+		
+		
+		
 	};
+	/*
 	var mouseOut = function(){
 		if(d2s == false){
 		d2.src="images/gymnut-trainer.png";
@@ -307,6 +310,7 @@ function mce_success_cb(resp){
 	};
 	d2.onmouseout= mouseOut;
 	d1.onmouseout=mouseOut;
+	*/
 </script>
 <!--End mc_embed_signup-->
 <!--  				<form>
