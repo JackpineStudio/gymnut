@@ -267,14 +267,16 @@ function mce_success_cb(resp){
 		d2s = true;
 		
 	};
-	d1.onclick = function(){
+	var d1click = function(){
 		d2.src="images/gymnut-trainer.png";
 		document.getElementById("G2").style.color="white";
 		document.getElementById("G1").style.color="#63964e";
 		d1.src ="images/gymnut-member-green.png";
-		r1.checked="false";
+		r1.checked="true";
 		d1s = true;
 	};
+	d1.onclick= d1click;
+	d1click();
 	d2.onmouseover = function(){
 		d1.src ="images/gymnut-member.png";
 		document.getElementById("G1").style.color="white";
