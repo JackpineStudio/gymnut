@@ -33,7 +33,7 @@
 					
 					<div class="choices" class="mc-field-group input-group">
 						<div class="choice member">
-							<label for="mce-group[833]-833-0" ><img src="images/gymnut-member.png" alt="" id="dSmall"></label>
+							<label for="mce-group[833]-833-0" ><img  src="images/gymnut-member.png" alt="" id="dSmall"></label>
 						    <input id="r1B" type="radio" value="2" name="group[833]" id="mce-group[833]-833-1"><label id="G1" for="mce-group[833]-833-0" >Gym Member?</label>
 						</div>
 						<div class="choice trainer">
@@ -252,28 +252,59 @@ function mce_success_cb(resp){
 	var d1 = document.getElementById("dSmall");
 	var r1= document.getElementById("r1B").style.display="none";
 	var r2= document.getElementById("r2B").style.display="none";
+	var d1s = false;
+	var d2s = false;
 	
 	d1.style.cursor="pointer";
 	d2.style.cursor="pointer";
+	
 	d2.onclick = function(){
-		if(d1.style.opacity == 0.5){
-			d1.style.opacity= 1;
-			document.getElementById("G1").style.opacity= 1;
-		}
-		document.getElementById("G2").style.opacity= 0.5;
-		d2.style.opacity = "0.5";
+		d1.src ="images/gymnut-member.png";
+		document.getElementById("G1").style.color="white";
+		document.getElementById("G2").style.color="#63934e";
+		d2.src = "images/gymnut-trainer-green.png";
 		r2.checked="true"
+		d2s = true;
 		
-	}
+	};
 	d1.onclick = function(){
-		if(d2.style.opacity == 0.5){
-			d2.style.opacity=1;
-			document.getElementById("G2").style.opacity= 1;
-		}
-		document.getElementById("G1").style.opacity= 0.5;
-		d1.style.opacity = "0.5";
+		d2.src="images/gymnut-trainer.png";
+		document.getElementById("G2").style.color="white";
+		document.getElementById("G1").style.color="#63964e";
+		d1.src ="images/gymnut-member-green.png";
 		r1.checked="false";
-	}
+		d1s = true;
+	};
+	d2.onmouseover = function(){
+		d1.src ="images/gymnut-member.png";
+		document.getElementById("G1").style.color="white";
+		document.getElementById("G2").style.color="#63934e";
+		d2.src = "images/gymnut-trainer-green.png";
+		r2.checked="true";
+		d1s= false;
+		d2s = false;
+	};	
+	d1.onmouseover= function(){
+		d2.src="images/gymnut-trainer.png";
+		document.getElementById("G2").style.color="white";
+		document.getElementById("G1").style.color="#63964e";
+		d1.src ="images/gymnut-member-green.png";
+		r1.checked="false";
+		d1s= false;
+		d2s = false;
+	};
+	var mouseOut = function(){
+		if(d2s == false){
+		d2.src="images/gymnut-trainer.png";
+		document.getElementById("G2").style.color="white";
+		}
+		if(d1s == false){
+		d1.src ="images/gymnut-member.png";
+		document.getElementById("G1").style.color="white";
+		}
+	};
+	d2.onmouseout= mouseOut;
+	d1.onmouseout=mouseOut;
 </script>
 <!--End mc_embed_signup-->
 <!--  				<form>
