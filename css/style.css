@@ -225,7 +225,11 @@ h3{
 	text-align: center;
 	margin: 0 auto 1em;
 }
+.social-top{
+	position: relative;
+	left: 600px;
 
+}
 .header{
 	text-align: center;
 	background-color: #e45629;
@@ -292,6 +296,9 @@ h3{
 	position: relative;
 	top: 550px;
 	left: 400px;
+}
+.social img{
+	padding-top: 1em;
 }
 }
 
