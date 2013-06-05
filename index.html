@@ -34,11 +34,11 @@
 					<div class="choices" class="mc-field-group input-group">
 						<div class="choice member">
 							<label for="mce-group[833]-833-0" ><img src="images/gymnut-member.png" alt="" id="dSmall"></label>
-						    <input id="r1B" type="radio" value="2" name="group[833]" id="mce-group[833]-833-1"><label class="zoomup" for="mce-group[833]-833-0" >Gym Member?</label>
+						    <input id="r1B" type="radio" value="2" name="group[833]" id="mce-group[833]-833-1"><label id="G1" for="mce-group[833]-833-0" >Gym Member?</label>
 						</div>
 						<div class="choice trainer">
 							<label for="mce-group[833]-833-1" ><img src="images/gymnut-trainer.png" alt="" id="dBig"></label>
-							<input id="r2B" type="radio" value="2" name="group[833]" id="mce-group[833]-833-1"><label  class="zoomup"for="mce-group[833]-833-1">Personal Trainer?</label>
+							<input id="r2B" type="radio" value="2" name="group[833]" id="mce-group[833]-833-1"><label  id="G2"for="mce-group[833]-833-1">Personal Trainer?</label>
 						</div>
 					</div>
 					<p>Sign up now to get invited for free beta testing.</p>
@@ -250,17 +250,17 @@ function mce_success_cb(resp){
 	// change the dumbell images to act as buttons
 	var d2 = document.getElementById("dBig");
 	var d1 = document.getElementById("dSmall");
-	var r1= document.getElementById("r1B");
-	var r2= document.getElementById("r2B");
-	r2.style.display="none";
-	r1.style.display="none";
+	var r1= document.getElementById("r1B").style.display="none";
+	var r2= document.getElementById("r2B").style.display="none";
 	
 	d1.style.cursor="pointer";
 	d2.style.cursor="pointer";
 	d2.onclick = function(){
-		if(d1.style.opacity == 0.5)
+		if(d1.style.opacity == 0.5){
 			d1.style.opacity= 1;
-			
+			document.getElementById("G1").style.opacity= 1;
+		}
+		document.getElementById("G2").style.opacity= 0.5;
 		d2.style.opacity = "0.5";
 		r2.checked="true"
 		
@@ -268,7 +268,9 @@ function mce_success_cb(resp){
 	d1.onclick = function(){
 		if(d2.style.opacity == 0.5){
 			d2.style.opacity=1;
-		}	
+			document.getElementById("G2").style.opacity= 1;
+		}
+		document.getElementById("G1").style.opacity= 0.5;
 		d1.style.opacity = "0.5";
 		r1.checked="false";
 	}
