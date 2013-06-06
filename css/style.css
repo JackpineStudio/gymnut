@@ -46,6 +46,7 @@ body{
 	background-color: #e45629;
 	background-image: url('../images/gymnut-background.jpg');
 	background-position: center top;
+	background-attachment:fixed;
 	color: #fff;
 	padding: 3em 0;
 }
